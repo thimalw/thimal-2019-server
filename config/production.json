@@ -1,0 +1,5 @@
+{
+  "name": "Production",
+  "database": "mongodb://localhost:27017/thimal",
+  "port": 3000
+}

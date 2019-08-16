@@ -7,11 +7,32 @@
     "build": "babel src -d dist --source-maps",
     "serve": "NODE_ENV=production node dist/server.js",
     "start": "NODE_ENV=development babel-node src/server.js",
-    "test": "DEBUG=server:debug NODE_ENV=test mocha --require babel-core/register --reporter spec --exit tests/ --exec babel-node",
-    "test:watch": "DEBUG=server:debug NODE_ENV=development mocha --require babel-core/register --watch --reporter spec tests/ --exec babel-node",
-    "dev": "DEBUG=server:debug NODE_ENV=development nodemon src/index.js --exec babel-node"
+    "test": "DEBUG=server:debug NODE_ENV=test mocha --require babel-core/register --reporter spec --exit ./tests --recursive --exec babel-node",
+    "test:watch": "DEBUG=server:debug NODE_ENV=development mocha --require babel-core/register --watch --reporter spec ./tests --recursive --exec babel-node",
+    "dev": "DEBUG=server:debug NODE_ENV=development nodemon src/server.js --exec babel-node"
+  },
+  "babel": {
+    "presets": [
+      "node8"
+    ]
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-node8": "^1.2.0",
+    "chai": "^4.2.0",
+    "config": "^3.2.2",
+    "debug": "^4.1.1",
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "mongoose": "^5.6.9"
+  }
 }
