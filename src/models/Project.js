@@ -13,6 +13,18 @@ const Project = new Schema({
   image: {
     type: String,
     default: ''
+  },
+  technology: {
+    type: String,
+    default: ''
+  },
+  test_technology: {
+    type: String,
+    default: ''
+  },
+  approach: {
+    type: String,
+    default: ''
   }
 }, { timestamps: true });
 

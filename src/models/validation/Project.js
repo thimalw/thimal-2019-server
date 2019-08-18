@@ -12,4 +12,16 @@ module.exports = Joi.object().keys({
     .allow('')
     .max(400)
     .label('Project image'),
+  technology: Joi.string()
+    .allow('')
+    .max(400)
+    .label('Project technology'),
+  test_technology: Joi.string()
+    .allow('')
+    .max(400)
+    .label('Test framework'),
+  approach: Joi.string()
+    .allow('')
+    .max(400)
+    .label('Development approach'),
 });
