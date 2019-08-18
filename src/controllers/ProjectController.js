@@ -4,7 +4,7 @@ const { makeRes, to } = require('../helpers');
 
 const list = async () => {
   let err, projects;
-  [err, projects] = await to(Project.find({}, '_id title description image createdAt'));
+  [err, projects] = await to(Project.find({}, '_id title description image technology test_technology approach createdAt'));
 
   if (err) {
     debug(err);
