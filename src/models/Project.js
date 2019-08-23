@@ -25,7 +25,19 @@ const Project = new Schema({
   approach: {
     type: String,
     default: ''
-  }
+  },
+  demo: {
+    type: String,
+    default: ''
+  },
+  source: {
+    type: String,
+    default: ''
+  },
+  blog_post: {
+    type: String,
+    default: ''
+  },
 }, { timestamps: true });
 
 module.exports = mongoose.model('Project', Project);

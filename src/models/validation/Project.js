@@ -24,4 +24,16 @@ module.exports = Joi.object().keys({
     .allow('')
     .max(400)
     .label('Development approach'),
+  demo: Joi.string()
+    .allow('')
+    .max(400)
+    .label('Project demo'),
+  source: Joi.string()
+    .allow('')
+    .max(400)
+    .label('Project source'),
+  blog_post: Joi.string()
+    .allow('')
+    .max(400)
+    .label('Blog link'),
 });
